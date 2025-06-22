@@ -1,6 +1,11 @@
 # 📰 Fake News Detection using BERT & XLNet
 
-This project applies cutting-edge transformer-based models (BERT and XLNet) to the task of **fake news detection** in English-language news articles. It demonstrates how powerful pretrained language models can be fine-tuned for binary classification tasks in Natural Language Processing (NLP).
+This project focuses on detecting fake news using state-of-the-art transformer-based language models — BERT and XLNet. Fake news has become a serious challenge in the digital age, and automatic detection systems can play a crucial role in mitigating misinformation.
+
+We fine-tune two powerful pretrained models, BERT (Bidirectional Encoder Representations from Transformers) and XLNet (Generalized Autoregressive Pretraining for Language Understanding), to perform binary classification on news articles — classifying them as either **FAKE** or **REAL**. The project involves comprehensive data preprocessing, tokenization, model training, and evaluation using real-world news data.
+
+By leveraging transfer learning and modern NLP architectures, this project demonstrates how transformer models can achieve high accuracy and robust performance in a practical natural language understanding task.
+
 
 ---
 
@@ -10,68 +15,101 @@ This project applies cutting-edge transformer-based models (BERT and XLNet) to t
 - **Models used**:
   - BERT (Bidirectional Encoder Representations from Transformers)
   - XLNet (Generalized Autoregressive Pretraining for Language Understanding)
-- **Dataset**: [Kaggle Fake News Dataset](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset)
+- **Dataset**: https://drive.google.com/drive/folders/1mrX3vPKhEzxG96OCPpCeh9F8m_QKCM4z
 - **Frameworks**: PyTorch, HuggingFace Transformers, Scikit-learn
 
 ---
 
-## 📊 Features
+## 📌 Project Workflow
 
-- Data cleaning and preprocessing
-- Tokenization using HuggingFace Transformers
-- Fine-tuning BERT and XLNet on fake news classification
-- Binary classification: FAKE vs. REAL
-- Evaluation with multiple metrics (Accuracy, Precision, Recall, F1-score)
-- Confusion matrix visualization
-- Performance comparison between BERT and XLNet
+1. **Final Project Objective**  
+   Build a binary classifier to detect fake news articles using pretrained NLP models (BERT and XLNet).
+
+2. **Load Data**  
+   - Load and inspect the Fake & Real News dataset from Kaggle.
+
+3. **Data Processing**  
+   - Clean text data (remove punctuation, lowercasing, stopwords, etc.).
+   - Label encoding (FAKE = 0, REAL = 1).
+
+4. **Exploratory Data Analysis (EDA)**  
+   - 📊 **3.1 Class Distribution**: Visualize the balance between fake and real samples.  
+   - ✏️ **3.2 Text Length Analysis**: Check distribution of article lengths.  
+   - ☁️ **3.3 Word Cloud Analysis**: Display most frequent terms in FAKE vs. REAL news.  
+   - 📚 **3.4 Most Common Words**: Analyze top unigrams and bigrams per class.
+
+5. **Model Building**  
+   - Use HuggingFace Transformers for BERT and XLNet.
+   - Tokenization with appropriate model tokenizer.
+
+6. **Hyperparameter Setup**  
+   - Define learning rate, batch size, epochs, max sequence length, etc.
+
+7. **Model Training**  
+   - Fine-tune BERT and XLNet using PyTorch.
+   - Apply early stopping and validation monitoring.
+
+8. **Performance Evaluation**  
+   - Compute accuracy, precision, recall, F1-score.
+   - Visualize confusion matrix for both models.
+
+9. **Inference**  
+   - Use trained models to predict fake/real labels on unseen news samples.
+
+---
+
+## 📊 Features Summary
+
+- ✅ End-to-end NLP pipeline for binary classification
+- 🧹 Robust text preprocessing and cleaning
+- 📊 Visual EDA: class distribution, word clouds, length histograms
+- 🤖 Fine-tuning of transformer models (BERT & XLNet)
+- ⚙️ Custom hyperparameter configuration
+- 📈 Model evaluation with multiple metrics
+- 🔍 Real sample inference using trained models
+- 📊 Confusion matrix visualizations for comparison
 
 ---
 
 ## 📈 Evaluation Results
 
-| Model  | Accuracy | Precision | Recall | F1 Score |
-|--------|----------|-----------|--------|----------|
-| BERT   | 95.2%    | 95.4%     | 94.9%  | 95.1%    |
-| XLNet  | 96.1%    | 96.0%     | 96.2%  | 96.0%    |
+### 🔹 BERT Classification Report
 
-📌 *Note: Results may vary depending on random seed, dataset split, and training configuration.*
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| Fake  | 0.96      | 0.96   | 0.96     | 5105    |
+| True  | 0.96      | 0.96   | 0.96     | 5179    |
+| **Overall Accuracy** |       |        | **0.96** | 10284   |
 
----
-## 🤔 Key Challenges
+### 🔹 XLNet Classification Report
 
-- Preprocessing long text sequences and truncation
-- Handling class imbalance in fake/real distribution
-- Managing GPU memory with large transformer models
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| Fake  | 0.94      | 0.98   | 0.96     | 5105    |
+| True  | 0.97      | 0.94   | 0.96     | 5179    |
+| **Overall Accuracy** |       |        | **0.96** | 10284   |
 
-## 💡 Insights
+### 🔍 Comparison Summary
 
-- XLNet slightly outperformed BERT, possibly due to its permutation-based training.
-- Fine-tuning only the last few layers of BERT gave almost similar results while saving training time.
-
----
-
-## 🔮 Future Work
-
-- Apply RoBERTa and DeBERTa for performance comparison
-- Integrate attention visualization for explainability
-- Deploy model as a web API using FastAPI or Flask
+- Both models achieved **96% overall accuracy** on the test set.
+- **XLNet** had slightly higher precision on the **True** class but slightly lower recall.
+- **BERT** showed more balanced performance across both classes.
+- Final F1-scores are equal (0.96), indicating both models are strong candidates for deployment.
 
 ---
-
-
 
 ## 🚀 Quick Start
 
 ### ✅ Open in Google Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/your-username/your-repo-name/blob/main/fake_news_bert_xlnet.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1VJzW7t9ZLBDxsdBPwlqDja7ubcJxKrLa/view?usp=sharing)
 
 ### 🔧 Run Locally
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/quanho114/Fake-New-Detection.git
+cd Fake-New-Detection
 
 # 2. Install dependencies
 pip install -r requirements.txt
