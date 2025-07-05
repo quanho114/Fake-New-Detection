@@ -1,4 +1,4 @@
-# 📰 Fake News Detection using BERT & XLNet
+# Fake News Detection using BERT & XLNet
 
 This project focuses on detecting fake news using state-of-the-art transformer-based language models — BERT and XLNet. Fake news has become a serious challenge in the digital age, and automatic detection systems can play a crucial role in mitigating misinformation.
 
@@ -9,7 +9,7 @@ By leveraging transfer learning and modern NLP architectures, this project demon
 
 ---
 
-## 📌 Overview
+## Overview
 
 - **Goal**: Classify news articles as **FAKE** or **REAL**
 - **Models used**:
@@ -20,7 +20,7 @@ By leveraging transfer learning and modern NLP architectures, this project demon
 
 ---
 
-## 📌 Project Workflow
+## Project Workflow
 
 1. **Final Project Objective**  
    Build a binary classifier to detect fake news articles using pretrained NLP models (BERT and XLNet).
@@ -33,10 +33,10 @@ By leveraging transfer learning and modern NLP architectures, this project demon
    - Label encoding (FAKE = 0, REAL = 1).
 
 4. **Exploratory Data Analysis (EDA)**  
-   - 📊 **3.1 Class Distribution**: Visualize the balance between fake and real samples.  
-   - ✏️ **3.2 Text Length Analysis**: Check distribution of article lengths.  
-   - ☁️ **3.3 Word Cloud Analysis**: Display most frequent terms in FAKE vs. REAL news.  
-   - 📚 **3.4 Most Common Words**: Analyze top unigrams and bigrams per class.
+   - **3.1 Class Distribution**: Visualize the balance between fake and real samples.  
+   - **3.2 Text Length Analysis**: Check distribution of article lengths.  
+   - **3.3 Word Cloud Analysis**: Display most frequent terms in FAKE vs. REAL news.  
+   - **3.4 Most Common Words**: Analyze top unigrams and bigrams per class.
 
 5. **Model Building**  
    - Use HuggingFace Transformers for BERT and XLNet.
@@ -58,22 +58,22 @@ By leveraging transfer learning and modern NLP architectures, this project demon
 
 ---
 
-## 📊 Features Summary
+## Features Summary
 
-- ✅ End-to-end NLP pipeline for binary classification
-- 🧹 Robust text preprocessing and cleaning
-- 📊 Visual EDA: class distribution, word clouds, length histograms
-- 🤖 Fine-tuning of transformer models (BERT & XLNet)
-- ⚙️ Custom hyperparameter configuration
-- 📈 Model evaluation with multiple metrics
-- 🔍 Real sample inference using trained models
-- 📊 Confusion matrix visualizations for comparison
+- End-to-end NLP pipeline for binary classification
+- Robust text preprocessing and cleaning
+- Visual EDA: class distribution, word clouds, length histograms
+- Fine-tuning of transformer models (BERT & XLNet)
+- Custom hyperparameter configuration
+- Model evaluation with multiple metrics
+- Real sample inference using trained models
+- Confusion matrix visualizations for comparison
 
 ---
 
-## 📈 Evaluation Results
+## Evaluation Results
 
-### 🔹 BERT Classification Report
+### BERT Classification Report
 
 | Class | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
@@ -81,7 +81,7 @@ By leveraging transfer learning and modern NLP architectures, this project demon
 | True  | 0.96      | 0.96   | 0.96     | 5179    |
 | **Overall Accuracy** |       |        | **0.96** | 10284   |
 
-### 🔹 XLNet Classification Report
+### XLNet Classification Report
 
 | Class | Precision | Recall | F1-Score | Support |
 |-------|-----------|--------|----------|---------|
@@ -89,7 +89,7 @@ By leveraging transfer learning and modern NLP architectures, this project demon
 | True  | 0.97      | 0.94   | 0.96     | 5179    |
 | **Overall Accuracy** |       |        | **0.96** | 10284   |
 
-### 🔍 Comparison Summary
+### Comparison Summary
 
 - Both models achieved **96% overall accuracy** on the test set.
 - **XLNet** had slightly higher precision on the **True** class but slightly lower recall.
@@ -98,13 +98,13 @@ By leveraging transfer learning and modern NLP architectures, this project demon
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-### ✅ Open in Google Colab
+### Open in Google Colab
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1VJzW7t9ZLBDxsdBPwlqDja7ubcJxKrLa/view?usp=sharing)
 
-### 🔧 Run Locally
+### Run Locally
 
 ```bash
 # 1. Clone the repository
