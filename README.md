@@ -97,12 +97,23 @@ By leveraging transfer learning and modern NLP architectures, this project demon
 - Final F1-scores are equal (0.96), indicating both models are strong candidates for deployment.
 
 ---
+## Conclusion
 
+This project demonstrates how transformer-based models like BERT and XLNet can be effectively fine-tuned for fake news detection. Through careful preprocessing, model selection, and evaluation, both models achieved impressive performance with 96% accuracy on the test set.
+
+The results indicate that transfer learning using state-of-the-art NLP architectures provides a powerful approach to tackle misinformation. This solution can be a foundational step toward building more reliable, scalable, and intelligent news verification systems.
+
+Future work could explore:
+- Expanding to multilingual or multi-source news datasets
+- Deploying models in production with APIs or web interfaces
+- Integrating explainability techniques for transparency
+
+---
 ## Quick Start
 
 ### Open in Google Colab
 
-[![Open In Colab](https://colab.research.google.com/github/quanho114/Fake-New-Detection/blob/main/Fake_News.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/quanho114/Fake-New-Detection/blob/main/Fake_News.ipynb)
 
 ### Run Locally
 
