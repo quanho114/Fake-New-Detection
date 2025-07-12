@@ -115,4 +115,4 @@ cd Fake-New-Detection
 pip install -r requirements.txt
 
 # 3. Run the notebook
-jupyter notebook fake_news_bert_xlnet.ipynb
+jupyter notebook project.ipynb
