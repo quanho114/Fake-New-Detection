@@ -126,4 +126,4 @@ cd Fake-New-Detection
 pip install -r requirements.txt
 
 # 3. Run the notebook
-jupyter notebook project.ipynb
+jupyter notebook Fake_News.ipynb
